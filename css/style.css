@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: #003876;
+    height: 100%;
+}
+h1{
+    font-family: "EB Garamond", serif;
+    text-align: left;
+    color: #ffffff;
+    font-display: 5px;
+}
+.screen {
+    width: 305px;
+    margin: 5px;
+    font-size: 50px;
+    padding: 5px;
+    background: rgb(224, 225, 228);
+    border: none;
+    font-family: "EB Garamond", serif;
+    text-align: right;
+}
+
+.op td input {
+    background-color: #da1363;
+}
+input .color_d {
+    background-color: #da1363;
+}
+.button {
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    margin: 2px;
+    cursor: pointer;
+    font-family: "Lora", serif;
+    background: rgb(62, 224, 162);
+    color: white;
+    border: none;
+}
+
+
+.boton_cero {
+    width: 156px;
+}
+
+.boton_igual {
+    height: 156px;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
