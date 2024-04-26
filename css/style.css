@@ -11,7 +11,7 @@ h1{
     font-family: "Lora", serif;
     text-align: left;
     color: azure;
-    font-display: 5px;
+    font-size: 32px;
 }
 .screen {
     width: 305px;
@@ -38,8 +38,16 @@ h1{
 .btn_red td input {
     background-color: #da1363;
 }
-tr td input .button {
+.button-red {
     background-color: #da1363;
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    margin: 2px;
+    cursor: pointer;
+    font-family: "Lora", serif;
+    color: white;
+    border: none;
 }
 
 .boton_cero {
@@ -48,7 +56,6 @@ tr td input .button {
 
 .boton_igual {
     height: 156px;
-    background-color: #da1363;
 }
 
 .main {
