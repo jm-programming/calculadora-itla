@@ -1,187 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Homemade+Apple"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lekton|Space+Mono"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
 
-    <title>Calculadora JS</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/1486395290-09-calculator_80565.ico" type="image/x-icon" />
 
-  <body>
-    <div class="main">
-      <h1>CALCULADORA ITLA</h1>
-      <form name="form">
-        <input class="screen" name="textview" id="screen" readonly />
-      </form>
-      <table>
-        <tr class="op">
-          <td>
-            <input class="button" type="button" value="C" onclick="limpiar()" />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="<"
-              onclick="eliminar_digito()"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="/"
-              onclick="insertar('/')"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="*"
-              onclick="insertar('*')"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="7"
-              onclick="insertar(7)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="8"
-              onclick="insertar(8)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="9"
-              onclick="insertar(9)"
-            />
-          </td>
-          <td>
-            <input
-              class="button color_d"
-              type="button"
-              value="-"
-              onclick="insertar('-')"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="4"
-              onclick="insertar(4)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="5"
-              onclick="insertar(5)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="6"
-              onclick="insertar(6)"
-            />
-          </td>
-          <td>
-            <input
-              class="button color_d"
-              type="button"
-              value="+"
-              onclick="insertar('+')"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="1"
-              onclick="insertar(1)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="2"
-              onclick="insertar(2)"
-            />
-          </td>
-          <td>
-            <input
-              class="button"
-              type="button"
-              value="3"
-              onclick="insertar(3)"
-            />
-          </td>
-          <td rowspan="5">
-            <input
-              class="button boton_igual color_d"
-              type="button"
-              value="="
-              onclick="igual()"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <input
-              class="button boton_cero"
-              type="button"
-              value="0"
-              onclick="insertar(0)"
-            />
-          </td>
-          <td>
-            <input
-              class="button color_d"
-              type="button"
-              value="."
-              onclick="insertar('.')"
-            />
-          </td>
-        </tr>
-      </table>
-    </div>
-    <script src="js/funciones.js"></script>
-  </body>
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lekton|Space+Mono" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Calculadora JS</title>
+</head>
+
+<body>
+  <div class="main">
+    <h1>CALCULADORA ITLA</h1>
+    <form name="form">
+      <input class="screen" name="textview" id="screen" readonly />
+    </form>
+    <table>
+      <tr class="btn_red">
+        <td>
+          <input class="button" type="button" value="C" onclick="limpiar()" />
+        </td>
+        <td>
+          <input class="button" type="button" value="&larr;" onclick="eliminar_digito()" />
+        </td>
+        <td>
+          <input class="button" type="button" value="/" onclick="insertar('/')" />
+        </td>
+        <td>
+          <input class="button" type="button" value="*" onclick="insertar('*')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="7" onclick="insertar(7)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="8" onclick="insertar(8)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="9" onclick="insertar(9)" />
+        </td>
+        <td>
+          <input style="background-color:#da1363;" class="button btn_red" type="button" value="-" onclick="insertar('-')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="4" onclick="insertar(4)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="5" onclick="insertar(5)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="6" onclick="insertar(6)" />
+        </td>
+        <td>
+          <input style="background-color:#da1363;" class="button btn_red" type="button" value="+" onclick="insertar('+')" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="button" type="button" value="1" onclick="insertar(1)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="2" onclick="insertar(2)" />
+        </td>
+        <td>
+          <input class="button" type="button" value="3" onclick="insertar(3)" />
+        </td>
+        <td rowspan="5">
+          <input class="button boton_igual" type="button" value="=" onclick="igual()" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input class="button boton_cero" type="button" value="0" onclick="insertar(0)" />
+        </td>
+        <td>
+          <input style="background-color:#da1363;" class="button" type="button" value="." onclick="insertar('.')" />
+        </td>
+      </tr>
+    </table>
+    <div>
+
+    
+    <span>Realizada por Juan Manuel Pineda</span>
+    
+      </div>
+  </div>
+  <script src="js/funciones.js"></script>
+</body>
+
 </html>

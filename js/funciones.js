@@ -1,22 +1,33 @@
 const screen = document.getElementById("screen")
 
-const insertar = (num)  => screen.value += num
-const  limpiar = () => screen.value = ''
+const insertar = (num)  => {
+    if(num == '.' && screen.value.includes('.')) return
+    if(screen.value == "" && (num == '*' || num == '/') ) return
+    if(screen.value.endsWith('-') && num =='-') return
+    if(screen.value.endsWith('*') && num =='*') return
+    if(screen.value.endsWith('/') && num =='/') return
+    if(screen.value.endsWith('+') && num =='+') return
 
+    if(screen.value.substring(screen.value.length,-1) == '-' && num == '-' ) return
+    screen.value += num
+
+}
+
+
+const limpiar = () => screen.value = ''
+
+//si exp es un numero puede proceder al calculo, de lo contrario no hacer nada
 
 const igual = () => {
     const exp = screen.value;
-    const esNumero = exp.substring(0, 1);
-    if (esNumero == "-" || esNumero == "*" || !isNaN(esNumero)) {
+    const caracter = exp.substring(0, 1); 
+    if (caracter == "-" || !isNaN(caracter)) {
         exp ? screen.value = eval(exp) : 0
-        console.log("Es un caracter valido");
-    } else {
-        limpiar()
+        
     } 
 }
 
 const eliminar_digito = () => {
     let exp = screen.value;
-    console.log(screen.value.length);
     screen.value = exp.substring(0, screen.value.length - 1);
 }

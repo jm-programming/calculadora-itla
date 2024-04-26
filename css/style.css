@@ -8,9 +8,9 @@ body{
     height: 100%;
 }
 h1{
-    font-family: "EB Garamond", serif;
+    font-family: "Lora", serif;
     text-align: left;
-    color: #ffffff;
+    color: azure;
     font-display: 5px;
 }
 .screen {
@@ -24,12 +24,6 @@ h1{
     text-align: right;
 }
 
-.op td input {
-    background-color: #da1363;
-}
-input .color_d {
-    background-color: #da1363;
-}
 .button {
     width: 75px;
     height: 75px;
@@ -41,7 +35,12 @@ input .color_d {
     color: white;
     border: none;
 }
-
+.btn_red td input {
+    background-color: #da1363;
+}
+tr td input .button {
+    background-color: #da1363;
+}
 
 .boton_cero {
     width: 156px;
@@ -49,6 +48,7 @@ input .color_d {
 
 .boton_igual {
     height: 156px;
+    background-color: #da1363;
 }
 
 .main {
@@ -58,4 +58,9 @@ input .color_d {
     transform: translateX(-50%) translateY(-50%);
 }
 
+span{
+    font-size: 20px;
+    color: azure;
+    margin: 5px;
+}
 
